@@ -1,0 +1,22 @@
+create database accesscontrol;
+use accesscontrol;
+create table adduser(ename varchar(50),contact_no varchar(12),email varchar(50),
+qualification varchar(50),address varchar(50),designation varchar(50),experience varchar(10),username varchar(50),password varchar(50));
+
+create table acp(role varchar(100),rolekey blob);
+create table cloudkey(role varchar(100),rolekey blob);
+
+create table contactinfo(pid varchar(50),pname varchar(50),problem_desc varchar(100),contact_no varchar(12),address varchar(50));
+create table billinginfo(pid varchar(50),pname varchar(50),amount double);
+create table doctor(pid varchar(50),pname varchar(50),problem varchar(100),prescription varchar(200));
+
+create table ownerbilling(pid blob,pname blob,amount blob);
+create table ownercontact(pid blob,pname blob,problem_desc blob,contact_no blob,address blob);
+create table ownermedical(pid blob,pname blob,problem blob,prescription blob);
+
+create table cloudbilling(pid blob,pname blob,amount blob);
+create table cloudcontact(pid blob,pname blob,problem_desc blob,contact_no blob,address blob);
+create table cloudmedical(pid blob,pname blob,problem blob,prescription blob);
+
+
+
